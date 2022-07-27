@@ -21,7 +21,7 @@
 
         </div>
 
-        <h1 class="display-4">Produits disponibles:</h1>
+        <h1 v-bind:class="affichage">Produits disponibles:</h1>
         <div class="row">
             <div class="col-3" v-for="produit in produits">
                 <p class="jombotron">
@@ -42,9 +42,10 @@
     var app = new Vue({
         el: "#app",
         data: {
-            user: "Jamal",
+            user: "Jam",
             produits: ["Pizza", "Hamburger", "Cheeseburger", "Tacos"],
-            commandes: []
+            commandes: [],
+            affichage: "display-4"
         },
         methods:{
             commander: function(produit){
